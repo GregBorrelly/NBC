@@ -1,0 +1,75 @@
+body {
+    background: #0F2139;
+    font-family: sans-serif;
+}
+h1 {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    color:#0F2139;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+ 
+    margin-bottom:10px;
+}
+
+img {
+    width: 100%;
+    max-height: 280px;
+}
+
+form {
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 23px;
+    width: 300px;
+}
+
+ul, li {
+    text-align: center; 
+    padding: 3px;
+    margin-bottom: 5px;
+    color: #0F2139;
+}
+.theme-color{
+    background: #0F2139;
+    color: white;
+}
+
+.container{
+    width: 90vh;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 1vh;
+    background: white;
+    padding: 20px;
+}
+
+#members {
+    border: solid #333 0.5px;
+    background: #f7f7f7;
+    padding: 10px;
+    min-height: 179px;
+}
+#nbc-email-field {
+    padding: 5px;
+    font-size: 12px;
+    width: 200px;
+
+}
+input:focus:invalid {
+    /* insert your own styles for invalid form input */
+    -moz-box-shadow: none;
+    border: solid red 2px;
+}
+
+input:required:valid {
+    border: solid green 2px;
+}
