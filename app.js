@@ -33,7 +33,8 @@ const saveItemToLocalStorage = (key, value) => {
 
 window.onload = () => {
     document.getElementById('nbc-email-form').addEventListener('submit', () => {
-
+        // Ran out of time.  In here instead of using the click handler, 
+        // I would fire the savemember func wrapped around a throttle function.
     })
     const emails = fetchFromLocalStorage('nbc-newsletter-emails') || []
     const throttledInterval = fetchFromLocalStorage('nbc-newsletter-throttledInterval')
