@@ -40,7 +40,10 @@ li {
     color: #0F2139;
 }
 
-.theme-color {
+.hide{
+    display: none;
+}
+.nbc-theme-color {
     background: #0F2139;
     color: white;
 }

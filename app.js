@@ -14,11 +14,21 @@ const populateNewMembers = (arr = []) => {
 const saveMember = (member) => {
     const emails = fetchFromLocalStorage('nbc-newsletter-emails') || []
     if (!emails.includes(`Welcome ${member} !`)) {
-        emails.unshift(`Welcome ${member} !`)
+        emails.push(`Welcome ${member} !`)
         localStorage.setItem('nbc-newsletter-emails', JSON.stringify(emails))
         populateNewMembers([`Welcome ${member} !`])
     }
 
+}
+
+const hideElementsByIds = (elements) => {
+    elements.forEach(element => {
+        document.getElementById(element).classList += 'hide'
+    })
+}
+
+const saveItemToLocalStorage = (key, value) => {
+    localStorage.setItem(key, JSON.stringify(value))
 }
 
 window.onload = () => {
@@ -30,7 +40,8 @@ window.onload = () => {
 
 
     if (!throttledInterval) {
-        //Handle 
+        hideElementsByIds(['nbc-main-input-body', 'nbc-member-area'])
+        document.getElementById('throttle-input').classList.remove('hide')
     }
     populateNewMembers(emails)
 }

@@ -14,23 +14,34 @@
 
 <body>
     <div class="container">
-        <div>
+        
+        <div id="throttle-input" class="hide">
+            <form action="#"  onsubmit="saveItemToLocalStorage('nbc-newsletter-throttledInterval', document.getElementById('nbc-throttle-field').value);">
+                <label for="">Choose Throttle speed</label>
+                <input type="number" name="quantity" min="1" max="5" id="nbc-throttle-field">
+                <input type="submit" value="submit" class="nbc-theme-color">
+            </form>
+        </div>
+
+        <div id="nbc-main-input-body">
             <h1>NBC Newsletter</h1>
             <img src="./assets/img/background.png" alt="" srcset="">
+
             <form action="/subscribed" id="nbc-email-form"
                 onsubmit="saveMember(document.getElementById('nbc-email-field').value); return false">
+                
                 <label for="">Email Address</label>
+                
                 <input type="email" name="email" placeholder="email" id="nbc-email-field" required
                     oninvalid="this.setCustomValidity('Please enter a valid email address')"
                     onvalid="this.setCustomValidity('')">
-                <input type="submit" value="submit" class="theme-color">
+                
+                    <input type="submit" value="submit" class="nbc-theme-color">
             </form>
         </div>
-        <div>
+        <div id="nbc-member-area">
             <h1>Newest Members</h1>
-            <ul id="members">
-
-            </ul>
+            <ul id="members"></ul>
         </div>
     </div>
 
